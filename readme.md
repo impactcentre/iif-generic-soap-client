@@ -39,7 +39,7 @@ List<SoapOutput> outs = op.execute();
 // printing the outputs
 ```java
 for (SoapOutput out : outs) {  
-&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(out.getName());
-&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(out.getValue());
+                System.out.println(out.getName());
+                System.out.println(out.getValue());
 }
 ```
