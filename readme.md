@@ -1,7 +1,7 @@
 generic-soap-client [![Build Status](https://secure.travis-ci.org/impactcentre/iif-generic-soap-client.png?branch=master)](http://travis-ci.org/impactcentre/iif-generic-soap-client)
 -------------------
 
-This is a library that can execute operations of an arbitrary SOAP web service. 
+This is a Java library that can execute operations of an arbitrary SOAP web service.
 
 It takes a URL to a WSDL and generates a data structure corresponding to the definitions. 
 All operations and input fields can be accessed and set at runtime. After executing an operation,
@@ -26,8 +26,8 @@ SoapOperation op = service.getOperation("myOperation");
 List<SoapInput> allInputs = op.getInputs();  
 SoapInput in = allInputs.get(0);  
 String name = in.getName();  
-boolean multi = in.isMultiValued(); //&nbsp;can contain several values  
-List<String> possible = in.getPossibleValues(); //&nbsp;for restricted types  
+boolean multi = in.isMultiValued(); // can contain several values
+List<String> possible = in.getPossibleValues(); // for restricted types
 in.setValue("some value");
 ```
 
