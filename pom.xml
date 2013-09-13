@@ -137,7 +137,7 @@
 	<repositories>
 		<repository>
 			<id>eviwarePluginRepository</id>
-			<url>http://www.eviware.com/repository/maven2/</url>
+			<url>http://www.soapui.com/repository/maven2</url>
 		</repository>
 	</repositories>
 	<build>
