@@ -17,21 +17,34 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic.example;
+package eu.impact_project.iif.ws.generic;
 
-import javax.jws.WebParam;
-import javax.jws.WebService;
+import java.io.InputStream;
 
-import org.apache.cxf.annotations.WSDLDocumentation;
-import org.apache.cxf.annotations.WSDLDocumentationCollection;
+/**
+ * Simple wrapper for an attached file
+ * 
+ * @author dennis
+ *
+ */
+public class SoapAttachment {
 
+	private InputStream stream;
 
+	private String contentType;
+	
+	public SoapAttachment(InputStream stream, String contentType) {
+		this.stream = stream;
+		this.contentType = contentType;
+	}
 
-	@WSDLDocumentation(value = "Hello World Service Description", placement = WSDLDocumentation.Placement.TOP)
-
-@WebService
-
-public interface Hello {
-	String sayHi(HelloRequest text, @WebParam(name = "bytes") byte[] bytes);
-
+	
+	public String getContentType() {
+		return contentType;
+	}
+	
+	public InputStream getInputStream() {
+		return stream;
+	}
+	
 }

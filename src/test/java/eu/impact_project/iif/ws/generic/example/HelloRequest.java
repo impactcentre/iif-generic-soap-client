@@ -17,34 +17,24 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic;
+package eu.impact_project.iif.ws.generic.example;
 
-import java.io.InputStream;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 
-/**
- * Simple wrapper for an attached file
- * 
- * @author dennis
- *
- */
-public class SoapAttachment {
+@XmlAccessorType(XmlAccessType.FIELD)
+public class HelloRequest {
 
-	private InputStream stream;
+	@XmlElement(defaultValue = "Bernhard")
+	private String text;
 
-	private String contentType;
-	
-	public SoapAttachment(InputStream stream, String contentType) {
-		this.stream = stream;
-		this.contentType = contentType;
+	public String getText() {
+		return text;
 	}
 
-	
-	public String getContentType() {
-		return contentType;
-	}
-	
-	public InputStream getInputStream() {
-		return stream;
-	}
+	public void setText(String text) {
+		this.text = text;
+	} 
 	
 }

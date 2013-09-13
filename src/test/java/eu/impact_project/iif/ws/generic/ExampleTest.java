@@ -17,7 +17,7 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic;
+package eu.impact_project.iif.ws.generic;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -31,7 +31,7 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import eu.impact_project.ws.generic.example.HelloImpl;
+import eu.impact_project.iif.ws.generic.example.HelloImpl;
 
 public class ExampleTest {
 

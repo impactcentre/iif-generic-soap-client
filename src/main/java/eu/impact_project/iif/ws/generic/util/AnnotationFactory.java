@@ -17,24 +17,14 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic.example;
+package eu.impact_project.iif.ws.generic.util;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
+import com.sun.xml.xsom.parser.AnnotationParser;
+import com.sun.xml.xsom.parser.AnnotationParserFactory;
 
-@XmlAccessorType(XmlAccessType.FIELD)
-public class HelloRequest {
-
-	@XmlElement(defaultValue = "Bernhard")
-	private String text;
-
-	public String getText() {
-		return text;
-	}
-
-	public void setText(String text) {
-		this.text = text;
-	} 
-	
+public class AnnotationFactory implements AnnotationParserFactory{
+    @Override
+    public AnnotationParser create() {
+        return new XsdAnnotationParser();
+    }
 }

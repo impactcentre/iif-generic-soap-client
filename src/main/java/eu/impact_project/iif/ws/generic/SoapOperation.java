@@ -17,7 +17,7 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic;
+package eu.impact_project.iif.ws.generic;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -44,7 +44,7 @@ import com.eviware.soapui.model.iface.Attachment;
 import com.eviware.soapui.model.iface.Response;
 import com.eviware.soapui.model.iface.Request.SubmitException;
 
-import eu.impact_project.ws.generic.util.MyUtils;
+import eu.impact_project.iif.ws.generic.util.MyUtils;
 
 /**
  * An executable operation with inputs and outputs

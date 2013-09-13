@@ -17,14 +17,20 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic.util;
+package eu.impact_project.iif.ws.generic.example;
 
-import com.sun.xml.xsom.parser.AnnotationParser;
-import com.sun.xml.xsom.parser.AnnotationParserFactory;
+import javax.jws.WebService;
+import org.bouncycastle.util.encoders.Base64;
 
-public class AnnotationFactory implements AnnotationParserFactory{
-    @Override
-    public AnnotationParser create() {
-        return new XsdAnnotationParser();
+
+
+	@WebService(endpointInterface = "eu.impact_project.iif.ws.generic.example.Hello",
+            serviceName = "Hello")
+public class HelloImpl implements Hello {
+ 
+    public String sayHi(HelloRequest text, byte[] bytes) {
+    	String decoded = new String(bytes);
+        return "Hello " + text.getText() + " " + decoded;
     }
+
 }

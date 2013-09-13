@@ -17,7 +17,7 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic;
+package eu.impact_project.iif.ws.generic;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -66,7 +66,7 @@ import com.sun.xml.xsom.XSTerm;
 import com.sun.xml.xsom.XSType;
 import com.sun.xml.xsom.parser.XSOMParser;
 
-import eu.impact_project.ws.generic.util.AnnotationFactory;
+import eu.impact_project.iif.ws.generic.util.AnnotationFactory;
 
 /**
  * Allows low-level reading of a wsdl

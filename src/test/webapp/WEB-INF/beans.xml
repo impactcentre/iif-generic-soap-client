@@ -11,7 +11,7 @@
     
     <jaxws:endpoint 
         id="hello" 
-        implementor="eu.impact_project.ws.generic.example.HelloImpl" 
+        implementor="eu.impact_project.iif.ws.generic.example.HelloImpl"
         address="/Hello" />
     
 </beans>

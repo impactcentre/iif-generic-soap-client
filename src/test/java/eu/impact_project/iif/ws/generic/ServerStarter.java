@@ -18,7 +18,7 @@
 
 */
 
-package eu.impact_project.ws.generic;
+package eu.impact_project.iif.ws.generic;
 
 import javax.xml.ws.Endpoint;
 

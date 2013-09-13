@@ -17,7 +17,7 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic;
+package eu.impact_project.iif.ws.generic;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ import org.jdom.xpath.XPath;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import eu.impact_project.ws.generic.util.MyUtils;
+import eu.impact_project.iif.ws.generic.util.MyUtils;
 
 /**
  * Bean representing an input field of a WSDL operation.

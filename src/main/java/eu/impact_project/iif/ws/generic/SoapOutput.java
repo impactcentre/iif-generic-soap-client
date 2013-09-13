@@ -17,7 +17,7 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic;
+package eu.impact_project.iif.ws.generic;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

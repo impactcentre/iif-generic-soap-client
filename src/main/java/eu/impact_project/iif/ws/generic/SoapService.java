@@ -17,7 +17,7 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic;
+package eu.impact_project.iif.ws.generic;
 
 import java.io.IOException;
 import java.net.URL;
@@ -30,7 +30,7 @@ import com.eviware.soapui.impl.wsdl.WsdlInterface;
 import com.eviware.soapui.impl.wsdl.WsdlOperation;
 import com.eviware.soapui.model.iface.Operation;
 
-import eu.impact_project.ws.generic.util.MyUtils;
+import eu.impact_project.iif.ws.generic.util.MyUtils;
 
 
 /**

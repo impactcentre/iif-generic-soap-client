@@ -17,7 +17,7 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic.util;
+package eu.impact_project.iif.ws.generic.util;
 
 import org.xml.sax.ContentHandler;
 import org.xml.sax.EntityResolver;

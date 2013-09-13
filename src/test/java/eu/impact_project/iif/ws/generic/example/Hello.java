@@ -17,20 +17,21 @@
 	limitations under the License.
 
 */
-package eu.impact_project.ws.generic.example;
+package eu.impact_project.iif.ws.generic.example;
 
+import javax.jws.WebParam;
 import javax.jws.WebService;
-import org.bouncycastle.util.encoders.Base64;
+
+import org.apache.cxf.annotations.WSDLDocumentation;
+import org.apache.cxf.annotations.WSDLDocumentationCollection;
 
 
 
-	@WebService(endpointInterface = "eu.impact_project.ws.generic.example.Hello",
-            serviceName = "Hello")
-public class HelloImpl implements Hello {
- 
-    public String sayHi(HelloRequest text, byte[] bytes) {
-    	String decoded = new String(bytes);
-        return "Hello " + text.getText() + " " + decoded;
-    }
+	@WSDLDocumentation(value = "Hello World Service Description", placement = WSDLDocumentation.Placement.TOP)
+
+@WebService
+
+public interface Hello {
+	String sayHi(HelloRequest text, @WebParam(name = "bytes") byte[] bytes);
 
 }
