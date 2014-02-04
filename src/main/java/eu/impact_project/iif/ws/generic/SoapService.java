@@ -29,6 +29,7 @@ import java.util.Map;
 import com.eviware.soapui.impl.wsdl.WsdlInterface;
 import com.eviware.soapui.impl.wsdl.WsdlOperation;
 import com.eviware.soapui.model.iface.Operation;
+import com.eviware.soapui.support.*;
 
 import eu.impact_project.iif.ws.generic.util.MyUtils;
 

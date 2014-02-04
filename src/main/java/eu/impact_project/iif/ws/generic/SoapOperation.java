@@ -23,10 +23,12 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import org.jdom.Document;
 import org.jdom.Element;
@@ -146,11 +148,20 @@ public class SoapOperation {
 	public List<SoapOutput> execute(String user, String pass) throws IOException {
 		try {
 			String request = getRequest();
+			Properties props = new Properties();
+			
+			InputStream inConfig = this.getClass().getClassLoader().getResourceAsStream("config.properties");			
+			props.load(inConfig);
+			
+			String timeout = props.getProperty("timeout");
+			
+			inConfig.close();
+
+			
 
 			// prepare the request
 			WsdlRequest wsdlRequest = operation.addNewRequest("req");
 			wsdlRequest.setRequestContent(request);
-			
 			
 			if ((user!=null && pass!=null) && (!user.equals("") && !pass.equals("")))
 			{
@@ -160,6 +171,8 @@ public class SoapOperation {
 				wsdlRequest.setPassword(pass);
 				wsdlRequest.setWssTimeToLive("10000");
 			}
+
+			wsdlRequest.setTimeout(timeout);
 
 			// send the request
 			WsdlSubmit submit = (WsdlSubmit) wsdlRequest.submit(
