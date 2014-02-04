@@ -132,6 +132,11 @@
 			<version>8.1.11.v20130520</version>
 			<scope>test</scope>
 		</dependency>
+	        <dependency>
+	            <groupId>org.apache.xerces</groupId>
+	            <artifactId>xercesImpl</artifactId>
+	            <version>2.9.1</version>
+	        </dependency>
         <!-- End Tests -->
 	</dependencies>
 	<repositories>
